@@ -54,3 +54,6 @@ http://localhost:3000/get-token?user={{user_id}}
 
 Replace `{{user_id}}` with the user ID for which you want to generate the token.
 
+## Security Note
+
+This is a sample application. In real-world scenarios, always ensure you keep the `private.pem` file secure. Exposing the private key might jeopardize the security of the service. When deploying in production, consider employing environment variables, secure vaults, or other mechanisms to safeguard the key.
