@@ -35,9 +35,9 @@ func initKeys() error {
 }
 
 func getTokenHandler(w http.ResponseWriter, r *http.Request) {
-	sub := r.URL.Query().Get("sub")
+	sub := r.URL.Query().Get("user")
 	if sub == "" {
-		http.Error(w, "Missing 'sub' parameter", http.StatusBadRequest)
+		http.Error(w, "Missing 'user' parameter", http.StatusBadRequest)
 		return
 	}
 

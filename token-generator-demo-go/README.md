@@ -49,7 +49,7 @@ go run main.go
 To obtain a token, access the following endpoint:
 
 ```bash
-http://localhost:3000/get-token?sub={{user_id}}
+http://localhost:3000/get-token?user={{user_id}}
 ```
 
 Replace `{{user_id}}` with the user ID for which you want to generate the token.
