@@ -17,7 +17,9 @@ var privateKey *rsa.PrivateKey
 func initKeys() error {
 	keyPath := os.Getenv("PRIVATE_KEY_PATH")
 	if keyPath == "" {
-		return fmt.Errorf("PRIVATE_KEY_PATH environment variable is required")
+		// use example key if no key path is provided
+		log.Println("No private key path provided, using example key")
+		keyPath = "private.pem"
 	}
 
 	keyData, err := os.ReadFile(keyPath)

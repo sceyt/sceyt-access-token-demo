@@ -1,4 +1,4 @@
-# Token Generator Demo Nodejs
+# Token Generator Demo Go
 
 This is a sample Golang application that demonstrates how to provide JWT access tokens signed with an RSA key for the Sceyt Chat API.
 
@@ -23,15 +23,18 @@ cd token-generator-demo-go
 go mod tidy
 ```
 
-3. **Create .env file and set the private key file's path as environment variable**
+3. **Copy the example .env file**
 
 ```bash
-mkdir .env
+cp .env.example .env
 ```
+
+Edit the `.env` file and set the `PRIVATE_KEY_PATH` variable to the path of the private key file.
  
 ```
 PRIVATE_KEY_PATH=/path/to/private.pem
 ```
+Example private.pem file will be used for demo purposes, if environment variable is not set.
 
 ## Run the Demo
 
